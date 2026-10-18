@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB92E" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bgGrad)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.07" stroke="#94A3B8" stroke-width="1">
+    <line x1="0" y1="80" x2="1280" y2="80" />
+    <line x1="0" y1="160" x2="1280" y2="160" />
+    <line x1="0" y1="240" x2="1280" y2="240" />
+    <line x1="0" y1="320" x2="1280" y2="320" />
+    <line x1="0" y1="400" x2="1280" y2="400" />
+    <line x1="0" y1="480" x2="1280" y2="480" />
+    <line x1="0" y1="560" x2="1280" y2="560" />
+    <line x1="0" y1="640" x2="1280" y2="640" />
+    
+    <line x1="160" y1="0" x2="160" y2="720" />
+    <line x1="320" y1="0" x2="320" y2="720" />
+    <line x1="480" y1="0" x2="480" y2="720" />
+    <line x1="640" y1="0" x2="640" y2="720" />
+    <line x1="800" y1="0" x2="800" y2="720" />
+    <line x1="960" y1="0" x2="960" y2="720" />
+    <line x1="1120" y1="0" x2="1120" y2="720" />
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="150" r="180" fill="#FFB92E" opacity="0.12" filter="url(#glow)" />
+  <circle cx="1080" cy="500" r="220" fill="#06B6D4" opacity="0.10" filter="url(#glow)" />
+
+  <!-- Top App Navigation Bar -->
+  <rect x="40" y="30" width="1200" height="64" rx="14" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1.5" />
+  <circle cx="72" cy="62" r="8" fill="#FFB92E" />
+  <text x="96" y="68" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="20">FraudGuard AI <tspan fill="#94A3B8" font-weight="400" font-size="14">| Transaction Risk &amp; Anomaly Detection</tspan></text>
+  
+  <rect x="920" y="46" width="120" height="32" rx="16" fill="#064E3B" stroke="#059669" stroke-width="1" />
+  <circle cx="936" cy="62" r="4" fill="#10B981" />
+  <text x="948" y="67" fill="#6EE7B7" font-family="sans-serif" font-size="12" font-weight="600">Model Active</text>
+
+  <rect x="1054" y="46" width="160" height="32" rx="16" fill="#1E293B" stroke="#475569" stroke-width="1" />
+  <text x="1070" y="67" fill="#CBD5E1" font-family="sans-serif" font-size="12">Threshold: 0.85</text>
+
+  <!-- Metric Card 1: Fraud Detection Rate -->
+  <rect x="40" y="114" width="280" height="130" rx="16" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1" />
+  <text x="64" y="148" fill="#94A3B8" font-family="sans-serif" font-size="13" font-weight="500">PRECISION / RECALL</text>
+  <text x="64" y="196" fill="#F8FAFC" font-family="sans-serif" font-size="34" font-weight="700">99.4%</text>
+  <rect x="64" y="212" width="160" height="6" rx="3" fill="#334155" />
+  <rect x="64" y="212" width="145" height="6" rx="3" fill="url(#goldGrad)" />
+  <text x="218" y="218" fill="#FFB92E" font-family="sans-serif" font-size="12" font-weight="600">+2.4%</text>
+
+  <!-- Metric Card 2: Transactions Scanned -->
+  <rect x="345" y="114" width="280" height="130" rx="16" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1" />
+  <text x="369" y="148" fill="#94A3B8" font-family="sans-serif" font-size="13" font-weight="500">TRANSACTIONS ANALYZED</text>
+  <text x="369" y="196" fill="#F8FAFC" font-family="sans-serif" font-size="34" font-weight="700">284,520</text>
+  <text x="369" y="222" fill="#06B6D4" font-family="sans-serif" font-size="12" font-weight="500">⚡ Latency &lt; 14ms / event</text>
+
+  <!-- Metric Card 3: Flagged Anomalies -->
+  <rect x="650" y="114" width="280" height="130" rx="16" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1" />
+  <text x="674" y="148" fill="#94A3B8" font-family="sans-serif" font-size="13" font-weight="500">FLAGGED ANOMALIES</text>
+  <text x="674" y="196" fill="#EF4444" font-family="sans-serif" font-size="34" font-weight="700">142</text>
+  <text x="736" y="194" fill="#94A3B8" font-family="sans-serif" font-size="14"> (0.05%)</text>
+  <text x="674" y="222" fill="#F87171" font-family="sans-serif" font-size="12">🛡️ Prevented Loss: $84,200</text>
+
+  <!-- Metric Card 4: Model Classifier -->
+  <rect x="955" y="114" width="285" height="130" rx="16" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1" />
+  <text x="979" y="148" fill="#94A3B8" font-family="sans-serif" font-size="13" font-weight="500">ALGORITHM ENSEMBLE</text>
+  <text x="979" y="184" fill="#FFB92E" font-family="sans-serif" font-size="18" font-weight="700">XGBoost + Isolation Forest</text>
+  <text x="979" y="214" fill="#CBD5E1" font-family="sans-serif" font-size="12">AUC-ROC Curve: 0.988</text>
+
+  <!-- Main Chart Section: Anomaly Distribution -->
+  <rect x="40" y="264" width="750" height="420" rx="20" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+  <text x="70" y="306" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="700">Real-Time Anomaly Scoring &amp; Risk Curves</text>
+  <text x="70" y="328" fill="#94A3B8" font-family="sans-serif" font-size="12">Temporal pattern analysis of card-not-present transaction volumes</text>
+
+  <!-- Graph Grid Lines -->
+  <line x1="70" y1="370" x2="750" y2="370" stroke="#334155" stroke-dasharray="4,4" />
+  <line x1="70" y1="440" x2="750" y2="440" stroke="#334155" stroke-dasharray="4,4" />
+  <line x1="70" y1="510" x2="750" y2="510" stroke="#334155" stroke-dasharray="4,4" />
+  <line x1="70" y1="580" x2="750" y2="580" stroke="#334155" stroke-width="1.5" />
+
+  <text x="48" y="374" fill="#64748B" font-size="11" font-family="sans-serif">1.0</text>
+  <text x="48" y="444" fill="#64748B" font-size="11" font-family="sans-serif">0.7</text>
+  <text x="48" y="514" fill="#64748B" font-size="11" font-family="sans-serif">0.3</text>
+  <text x="48" y="584" fill="#64748B" font-size="11" font-family="sans-serif">0.0</text>
+
+  <!-- Graph Smooth Area 1 (Normal Volume) -->
+  <path d="M 70 540 Q 180 520, 260 550 T 420 510 T 560 530 T 680 490 L 750 510 L 750 580 L 70 580 Z" fill="#3B82F6" fill-opacity="0.15" />
+  <path d="M 70 540 Q 180 520, 260 550 T 420 510 T 560 530 T 680 490 L 750 510" fill="none" stroke="#38BDF8" stroke-width="3" />
+
+  <!-- Graph Anomaly Spike Area -->
+  <path d="M 450 520 Q 480 340, 510 330 T 545 525" fill="url(#redGrad)" fill-opacity="0.25" />
+  <path d="M 450 520 Q 480 340, 510 330 T 545 525" fill="none" stroke="#EF4444" stroke-width="3.5" filter="url(#glow)" />
+  
+  <!-- Highlight Point -->
+  <circle cx="510" cy="330" r="7" fill="#EF4444" stroke="#FFF" stroke-width="2" />
+  <rect x="440" y="275" width="140" height="38" rx="8" fill="#7F1D1D" stroke="#EF4444" stroke-width="1" />
+  <text x="450" y="294" fill="#FECACA" font-family="sans-serif" font-size="11" font-weight="700">ANOMALY SPIKE</text>
+  <text x="450" y="307" fill="#FCA5A5" font-family="sans-serif" font-size="10">Risk: 0.96 | Geo-Mismatch</text>
+
+  <!-- Second area (Golden Prediction trend) -->
+  <path d="M 70 560 Q 200 550, 320 540 T 480 500 T 620 470 L 750 460" fill="none" stroke="#FFB92E" stroke-width="2.5" stroke-dasharray="6,4" />
+
+  <text x="80" y="640" fill="#94A3B8" font-size="12" font-family="sans-serif">Legend: </text>
+  <circle cx="140" cy="636" r="4" fill="#38BDF8" />
+  <text x="150" y="640" fill="#CBD5E1" font-size="12" font-family="sans-serif">Normal Stream</text>
+  <circle cx="270" cy="636" r="4" fill="#EF4444" />
+  <text x="280" y="640" fill="#CBD5E1" font-size="12" font-family="sans-serif">Fraud Anomaly</text>
+  <circle cx="410" cy="636" r="4" fill="#FFB92E" />
+  <text x="420" y="640" fill="#CBD5E1" font-size="12" font-family="sans-serif">Risk Threshold Margin</text>
+
+  <!-- Right Panel: Live Flagged Transactions -->
+  <rect x="815" y="264" width="425" height="420" rx="20" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+  <text x="840" y="306" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="700">Live Fraud Stream</text>
+  <text x="840" y="328" fill="#94A3B8" font-family="sans-serif" font-size="12">Automated classification queue</text>
+
+  <!-- Transaction item 1 -->
+  <rect x="835" y="350" width="385" height="68" rx="12" fill="#0f172a" stroke="#EF4444" stroke-width="1.5" />
+  <circle cx="862" cy="384" r="14" fill="#450a0a" />
+  <text x="857" y="389" fill="#EF4444" font-weight="700" font-size="16">!</text>
+  <text x="888" y="374" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">TX-98402 • $1,450.00</text>
+  <text x="888" y="394" fill="#94A3B8" font-family="sans-serif" font-size="11">Card #•••• 8912 | Lagos, NG (Proxy IP)</text>
+  <rect x="1130" y="366" width="76" height="24" rx="12" fill="#7F1D1D" />
+  <text x="1144" y="382" fill="#FCA5A5" font-family="sans-serif" font-size="11" font-weight="700">BLOCKED</text>
+
+  <!-- Transaction item 2 -->
+  <rect x="835" y="430" width="385" height="68" rx="12" fill="#0f172a" stroke="#F59E0B" stroke-width="1" />
+  <circle cx="862" cy="464" r="14" fill="#451a03" />
+  <text x="858" y="469" fill="#F59E0B" font-weight="700" font-size="15">?</text>
+  <text x="888" y="454" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">TX-98399 • $680.00</text>
+  <text x="888" y="474" fill="#94A3B8" font-family="sans-serif" font-size="11">Card #•••• 4209 | Rapid Velocity Alert</text>
+  <rect x="1130" y="446" width="76" height="24" rx="12" fill="#78350F" />
+  <text x="1144" y="462" fill="#FDE68A" font-family="sans-serif" font-size="11" font-weight="700">REVIEW</text>
+
+  <!-- Transaction item 3 -->
+  <rect x="835" y="510" width="385" height="68" rx="12" fill="#0f172a" stroke="#10B981" stroke-width="1" />
+  <circle cx="862" cy="544" r="14" fill="#064e3b" />
+  <text x="857" y="549" fill="#10B981" font-weight="700" font-size="14">✓</text>
+  <text x="888" y="534" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">TX-98395 • $42.50</text>
+  <text x="888" y="554" fill="#94A3B8" font-family="sans-serif" font-size="11">Card #•••• 3190 | Verified 3D-Secure</text>
+  <rect x="1130" y="526" width="76" height="24" rx="12" fill="#065F46" />
+  <text x="1144" y="542" fill="#A7F3D0" font-family="sans-serif" font-size="11" font-weight="700">PASSED</text>
+
+  <!-- Bottom notice -->
+  <rect x="835" y="595" width="385" height="42" rx="8" fill="#1e293b" stroke="#334155" />
+  <text x="850" y="621" fill="#94A3B8" font-family="sans-serif" font-size="12">⚡ Machine Learning Pipeline: Scikit-learn &amp; XGBoost</text>
+</svg>
